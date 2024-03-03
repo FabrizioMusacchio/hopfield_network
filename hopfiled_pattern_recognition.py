@@ -9,7 +9,7 @@ For reproducibility:
 conda create -n hopfield python=3.10
 conda activate hopfield
 conda install -y mamba
-mamba install -y numpy matplotlib
+mamba install -y numpy matplotlib ipykernel
 
 """
 # %% IMPORTS
@@ -44,6 +44,7 @@ class HopfieldNetwork:
             ax[i].set_xticks([])
             ax[i].set_yticks([])
         fig.suptitle(title)
+        plt.tight_layout()
         plt.savefig(f'{title}.png')
         plt.show()
 
